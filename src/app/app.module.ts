@@ -16,6 +16,7 @@ import { ProjectsModalPasswordComponent } from './projects-modal-password/projec
 import { ArchiveComponent } from './archive/archive.component';
 import { ImportComponent } from './import/import.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    HttpClientModule,
   
   ],
   providers: [],

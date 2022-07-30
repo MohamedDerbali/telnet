@@ -1,0 +1,6 @@
+.navigat{
+    background-image: url("../../assets/background.png");
+ }
+ .deconnect:hover{
+    cursor: pointer;
+ }

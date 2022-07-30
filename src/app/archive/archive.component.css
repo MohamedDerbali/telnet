@@ -1,0 +1,78 @@
+.telnetLogo {
+    margin-top: 50px;
+    margin-right: 90px;
+}
+
+.archive {
+    margin-left: 80px;
+}
+
+.exportArchives {
+    border: 1px solid #707070;
+    background-color: #2a2a2a;
+    opacity: 88%;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.circle {
+    color: white;
+    border: 2px solid white;
+    width: 120px;
+    border-radius: 20px;
+    margin-left: 32%;
+    font-size: 20px;
+    margin-top: 15%;
+}
+
+.circleMonth {
+    color: white;
+    border: 2px solid white;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.circleExemple {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 20px;
+    color: white;
+    border: 2px solid white;
+    width: 290px;
+    border-radius: 20px;
+    margin-left: 5%;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+.scrollableExemple {
+    margin-right: 5px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 2px !important;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+.up{
+    float: right;
+    margin-top: 2px;
+}

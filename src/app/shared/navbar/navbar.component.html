@@ -1,0 +1,44 @@
+<nav class="sidebar sidebar-offcanvas h-100 navigat" id="sidebar">
+    <ul class="nav">
+      <li [class]="activateNavigation('stats')" style="margin-top: 50%;">
+        <a class="nav-link" [routerLink]="['/']" (click)="changeNavigation('stats')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/home.svg"/>
+          </span>
+          <span class="menu-title">Home</span>
+        </a>
+      </li>
+      <li [class]="activateNavigation('profile')" >
+        <a class="nav-link" [routerLink]="['/profile']" (click)="changeNavigation('profile')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/user.svg"/>
+          </span>
+          <span class="menu-title">Mon profile</span>
+        </a>
+      </li>
+      <li [class]="activateNavigation('rapport')" >
+        <a class="nav-link" [routerLink]="['/rapport']" (click)="changeNavigation('rapport')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/rapport.svg"/>
+          </span>
+          <span class="menu-title">Rapports</span>
+        </a>
+      </li>
+      <!-- <li class="nav-item menu-items">
+        <a class="nav-link" href="pages/charts/chartjs.html">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/calendar.svg"/>
+          </span>
+          <span class="menu-title">Calendrier</span>
+        </a>
+      </li> -->
+      <li class="nav-item menu-items" [class]="activateNavigation('archive')">
+        <a class="nav-link" [routerLink]="['/archive']" (click)="changeNavigation('archive')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/archive.svg"/>
+          </span>
+          <span class="menu-title">Archive</span>
+        </a>
+      </li>
+     </ul>
+  </nav>

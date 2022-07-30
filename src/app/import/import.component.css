@@ -1,0 +1,13 @@
+.import {
+    margin-left: 30px;
+    padding:20px;
+}
+.btn-modif{
+    border: 2px solid white;
+    color:white;
+    background:none;
+    border-radius: 20px;
+}
+table{
+    color:white !important;
+}

@@ -107,7 +107,7 @@
                 <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                   <div class="navbar-profile">
                     <img class="img-xs rounded-circle" src="assets/images/faces/iheb.png" alt="">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Baccari Iheb<br/>Simple Utilisateur</p>
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">{{userConnected.first_name}} {{userConnected.last_name}}<br/>Utilisateur</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
                 </a>
@@ -132,7 +132,7 @@
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Log out</p>
+                      <p class="preview-subject mb-1" (click)="disconnect()">Log out</p>
                     </div>
                   </a>
                   <div class="dropdown-divider"></div>

@@ -22,7 +22,7 @@ const routes: Routes = [
       },
       {
         path: 'rapport',
-        component: RapportComponent,
+        component: ImportComponent,
       },
       {
         path: 'archive',

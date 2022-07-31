@@ -1,7 +1,9 @@
-<div class="import">
+<div class="import" >
 <br/><br/><br/><br/>
-<button class="btn-modif">Sélectionner un fichier</button>
+<input type="file" accept=".csv" #file hidden (change)="uploadCSVFile(file.files)">
+<button class="btn-modif" (click)="file.click()">Sélectionner un fichier</button>
 <br/><br/>
+<div class="table-responsive" >
 <table class="table text-white">
     <thead>
         <th scope="col" style="color: white">Manage</th>
@@ -15,82 +17,32 @@
         <th scope="col" style="color: white">Status for Tx</th>
         <th scope="col" style="color: white">Data</th>
     </thead>
-    <tbody>
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
+    <tbody style="overflow-y: scroll;">
+        <tr *ngIf="dataCSV.length == 0">
+            <td style="color: white"></td>
+            <td style="color: white"></td>
+            <td style="color: white"></td>
+            <td style="color: white"></td>
+            <td style="color: white;">pas de donnée</td>
+            <td style="color: white;"></td>
+            <td style="color: white;"></td>
+            <td style="color: white"></td>
+            <td style="color: white"></td>
+            <td style="color: white"></td>
         </tr>
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
+        <tr *ngFor="let record of dataCSV">
+            <td style="color: white"><button class="btn btn-info">Gérer</button></td>
+            <td style="color: white">{{record["Date and time[ms]"]}}</td>
+            <td style="color: white">{{record["Stamp"]}}</td>
+            <td style="color: white">{{record["Direction[In, Out, Undefined"]}}</td>
+            <td style="color: white">{{record["Source"]}}</td>
+            <td style="color: white">{{record["Destination"]}}</td>
+            <td style="color: white">{{record["Message Id"]}}</td>
+            <td style="color: white">{{record["Length"]}}</td>
+            <td style="color: white">{{record["status for Tx"]}}</td>
+            <td style="color: white">{{record["Data"]}}</td>
         </tr>
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
-        </tr>
-
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
-        </tr>
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
-        </tr>
-
-        <tr>
-            <td style="color: white"><button class="btn btn-info">Manage</button></td>
-            <td style="color: white">20-5-2022</td>
-            <td style="color: white">98</td>
-            <td style="color: white">O</td>
-            <td style="color: white">1</td>
-            <td style="color: white">2</td>
-            <td style="color: white">FEE0</td>
-            <td style="color: white">0</td>
-            <td style="color: white">ERR</td>
-            <td style="color: white">0000000</td>
-        </tr>
-        
     </tbody>
 </table>
+</div>
 </div>

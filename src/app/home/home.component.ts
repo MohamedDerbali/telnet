@@ -7,6 +7,7 @@ import { AppServicesService } from '../app-services.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  userConnected :any;
   constructor(private appServicesService: AppServicesService) {}
 
   ngOnInit(): void {
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
     this.appServicesService
       .getDataFromToken(connectedUserToken)
       .subscribe((res) => {
-        console.log(res);
+        this.userConnected = res;
       });
   }
   disconnect() {

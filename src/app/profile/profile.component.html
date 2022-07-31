@@ -1,33 +1,33 @@
 <div class="telnetLogo"><img src="../../assets/logo.png" style="float:right;width: 170px;"/></div>
 <div class="profile">
 <h4>Profile</h4>
-<img class="imgProfile" src="../../assets/images/faces/iheb.png"/> <button class="changePicture" (click)="openModal()">Changer la photo de profile</button>
+<img class="imgProfile" [src]="photoLink"/> <button class="changePicture" (click)="openModal()">Changer la photo de profile</button>
 <div class="profileInformations">
   <table>
     <tr>
       <td style="width: 20%; border-left: 1px solid #5A5A5A;">E-mail</td>
-      <td>nom.prenom@groupe-telnet.net</td>
+      <td>{{userConnected.email}}</td>
       <td style="border-right: 1px solid #5A5A5A;"></td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td style="width: 20%;border-left: 1px solid #5A5A5A;">Role</td>
       <td>simple utilisateur</td>
       <td style="border-right: 1px solid #5A5A5A;"></td>
-    </tr>
-    <tr>
+    </tr> -->
+    <!-- <tr>
       <td style="width: 20%;border-left: 1px solid #5A5A5A;">Departement</td>
       <td>Innovation</td>
       <td style="border-right: 1px solid #5A5A5A;"></td>
-    </tr>
+    </tr> -->
     <tr>
       <td style="width: 20%;border-left: 1px solid #5A5A5A;">Nom</td>
-      <td>Baccari Iheb</td>
+      <td>{{userConnected.first_name}} {{userConnected.last_name}}</td>
       <td style="border-right: 1px solid #5A5A5A;"><button class="btn-modif" (click)="openModalName()">Modifier</button></td>
     </tr>
     <tr>
       <td style="width: 20%;border-left: 1px solid #5A5A5A;">Mot de passe</td>
       <td>***********************</td>
-      <td style="border-right: 1px solid #5A5A5A;"><button class="btn-modif" (click)="openModalPassword()">Modifier</button></td>
+      <td style="border-right: 1px solid #5A5A5A;">Modifier</td>
     </tr>
   </table>
   </div>

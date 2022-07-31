@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
+import { AppServicesService } from '../app-services.service';
 import { ProjectsModalNameComponent } from '../projects-modal-name/projects-modal-name.component';
 import { ProjectsModalPasswordComponent } from '../projects-modal-password/projects-modal-password.component';
 import { ProjectsModalComponent } from '../projects-modal/projects-modal.component';
@@ -10,14 +11,25 @@ import { ProjectsModalComponent } from '../projects-modal/projects-modal.compone
 })
 export class ProfileComponent implements OnInit {
 
-
+  userConnected :any;
+  photoLink : any = '../../assets/images/faces/iheb.png';
   ngOnInit(): void {
+    let connectedUserToken = localStorage.getItem('token');
+    this.appServicesService
+      .getDataFromToken(connectedUserToken)
+      .subscribe((res) => {
+        console.log(res);
+        this.userConnected = res;
+      });
+      if(localStorage.getItem('photo')){
+        this.photoLink = localStorage.getItem('photo');
+      }
   }
   dialogConfig = new MatDialogConfig();
   modalDialog: MatDialogRef<ProjectsModalComponent, any> | undefined;
   modalDialogName: MatDialogRef<ProjectsModalNameComponent, any> | undefined;
   modalDialogPassword: MatDialogRef<ProjectsModalPasswordComponent, any> | undefined;
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog, private appServicesService: AppServicesService) { }
   ngAfterViewInit(): void {
     document.onclick = (args: any) : void => {
           if(args.target.tagName === 'BODY') {

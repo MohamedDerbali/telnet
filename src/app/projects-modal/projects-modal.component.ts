@@ -15,5 +15,8 @@ export class ProjectsModalComponent implements OnInit {
   close(){
     this.dialogRef.closeAll();
   }
-  
+  uploadProfilePhoto(files){
+    console.log(files[0]);
+
+  }
 }

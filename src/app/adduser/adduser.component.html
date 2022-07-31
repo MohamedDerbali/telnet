@@ -1,0 +1,86 @@
+
+<form class="login-form" style="padding-left: 300px;padding-right: 300px;padding-top: 100px;">
+    <h2 style="margin-top: 10px;text-align: center">Ajouter un utilisateur</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control rounded-left"
+        placeholder="Username"
+        name="username"
+        (change)="changeInput($event)"
+        required
+      />
+    </div>
+    <div class="form-group d-flex">
+      <input
+        type="password"
+        class="form-control rounded-left saisie"
+        placeholder="Mot de passe"
+        name="password"
+        (change)="changeInput($event)"
+        required
+      />
+    </div>
+    <div class="form-group d-flex">
+        <input
+          type="password"
+          class="form-control rounded-left saisie"
+          placeholder="Confirmation du mot de passe"
+          name="password2"
+          (change)="changeInput($event)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control rounded-left"
+          placeholder="Email"
+          name="email"
+          (change)="changeInput($event)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control rounded-left"
+          placeholder="Firstname"
+          name="first_name"
+          (change)="changeInput($event)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control rounded-left"
+          placeholder="Lastname"
+          name="last_name"
+          (change)="changeInput($event)"
+          required
+        />
+      </div>
+    <div class="form-group d-md-flex">
+      <div class="w-75">
+        <label class="checkbox-wrap checkbox-primary"
+          >Admin
+          <input type="checkbox" name="is_superuser"  (change)="changeChecked($event)"/>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="form-group d-flex mb-5">
+      <button
+        type="button"
+        (click)="adduser()"
+        class="btn btn-success rounded submit"
+      >
+        Ajouter
+      </button>
+    </div>
+    <div>
+      <br />
+      <!-- <span class="mdp mb-4">Mot de passe oublié</span> -->
+    </div>
+  </form>

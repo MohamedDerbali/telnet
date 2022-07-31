@@ -15,8 +15,11 @@ import { ProjectsModalNameComponent } from './projects-modal-name/projects-modal
 import { ProjectsModalPasswordComponent } from './projects-modal-password/projects-modal-password.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ImportComponent } from './import/import.component';
-import { CreateUserComponent } from './create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StepTwoReportComponent } from './step-two-report/step-two-report.component';
+import { EstimationComponent } from './estimation/estimation.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { AdduserComponent } from './adduser/adduser.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsModalPasswordComponent,
     ArchiveComponent,
     ImportComponent,
-    CreateUserComponent,
+    StepTwoReportComponent,
+    EstimationComponent,
+    UsersListComponent,
+    AdduserComponent,
   ],
   imports: [
     BrowserModule,

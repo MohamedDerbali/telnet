@@ -6,15 +6,15 @@
             Ancien Nom
           </div>
           <div class="col-sm">
-            Baccari Iheb
+            {{userConnected?.first_name}} {{userConnected?.last_name}}
           </div>
           <div class="w-100"></div>
           <div class="col-sm secondDiv">
             Nouveau Nom
           </div>
           <div class="col-sm secondDiv">
-            <input type="text" class="newName" placeholder="Exemple Exemple"/>
+            <input type="text" class="newName" name="username" (change)="changeInput($event)" placeholder="Exemple Exemple"/>
           </div>
-          <button class="changePhoto">Changer</button>
+          <button class="changePhoto" (click)="modifyProfileInformation(userConnected)">Changer</button>
         </div>
 </div>

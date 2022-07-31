@@ -24,7 +24,8 @@
           <span class="menu-title">Rapports</span>
         </a>
       </li>
-      <!-- <li class="nav-item menu-items">
+      
+      <!-- <li class="nav-item menu-items" hidden={!(userConnected.is_superuser)}>
         <a class="nav-link" href="pages/charts/chartjs.html">
           <span class="menu-icon">
             <img src="../../../assets/icon/calendar.svg"/>
@@ -38,6 +39,23 @@
             <img src="../../../assets/icon/archive.svg"/>
           </span>
           <span class="menu-title">Archive</span>
+        </a>
+      </li>
+     
+      <li [class]="activateNavigation('usersList')" *ngIf="userConnected.is_superuser">
+        <a class="nav-link" [routerLink]="['/usersList']" (click)="changeNavigation('usersList')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/rapport.svg"/>
+          </span>
+          <span class="menu-title">Liste des Utilisateurs</span>
+        </a>
+      </li>
+      <li [class]="activateNavigation('registerUser')" *ngIf="userConnected.is_superuser">
+        <a class="nav-link" [routerLink]="['/registerUser']" (click)="changeNavigation('registerUser')">
+          <span class="menu-icon">
+            <img src="../../../assets/icon/rapport.svg"/>
+          </span>
+          <span class="menu-title">Ajouter un Utilisateur</span>
         </a>
       </li>
      </ul>

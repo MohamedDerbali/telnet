@@ -18,4 +18,29 @@ export class AppServicesService {
   getDataFromToken(token): Observable<any> {
     return this.http.get<any>(`${environment.url}/decode/?token=${token}`);
   }
+  search({data, msg_id}): Observable<any> {
+    console.log(data);
+    console.log(msg_id);  
+    return this.http.post<any>(`${environment.url}/search/`,{
+    data,
+    msg_id
+    });
+  }
+  getUsersList(): Observable<any> {
+    return this.http.get<any>(`${environment.url}/user/`);
+  }
+  removeUser(userId): Observable<any> {
+    return this.http.delete<any>(`${environment.url}/user/${userId}/`);
+  }
+  addUser(data: any): Observable<any> {
+    return this.http.post<any>(`${environment.url}/register/`, data);
+  }
+  modifyUser(userId: any, data): Observable<any> {
+    return this.http.put<any>(`${environment.url}/user/${userId}/`,data);
+  }
+  refreshToken(token): Observable<any> {
+    return this.http.post<any>(`${environment.url}/refresh/`, {
+      refresh: token,
+    });
+  }
 }

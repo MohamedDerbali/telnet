@@ -1,0 +1,22 @@
+<div>
+    <img src="../../assets/modals/close.png" class="closeImg" (click)="close()"/>
+    <br/>  <br/> <br/> 
+    <div class="main ">
+        <div class="row">
+            <div class="col-sm">
+              Min
+            </div>
+            <div class="col-sm">
+                <input type="number" class="newName" placeholder="Intevale début" name="begin" (change)="handleChange($event)"/>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm secondDiv">
+                Max
+            </div>
+            <div class="col-sm secondDiv">
+              <input type="number" class="newName" placeholder="Intevale fin" name="end" (change)="handleChange($event)"/>
+            </div>
+            <button class="changePhoto" (click)="generateReport()">Génerer le rapport</button>
+          </div>
+    </div>
+</div>

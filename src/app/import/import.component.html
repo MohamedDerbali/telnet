@@ -6,8 +6,8 @@
 <div class="table-responsive" >
 <table class="table text-white">
     <thead>
-        <th scope="col" style="color: white">Manage</th>
-        <th scope="col" style="color: white">Date and TimeStamp</th>
+        <th scope="col" style="color: white">Gérer</th>
+        <th scope="col" style="color: white">Date and Time</th>
         <th scope="col" style="color: white">Stamp</th>
         <th scope="col" style="color: white">Direction</th>
         <th scope="col" style="color: white">Source</th>
@@ -31,7 +31,7 @@
             <td style="color: white"></td>
         </tr>
         <tr *ngFor="let record of dataCSV">
-            <td style="color: white"><button class="btn btn-info">Gérer</button></td>
+            <td style="color: white"><button class="btn btn-info" (click)="manageRecord($event, record)">Gérer</button></td>
             <td style="color: white">{{record["Date and time[ms]"]}}</td>
             <td style="color: white">{{record["Stamp"]}}</td>
             <td style="color: white">{{record["Direction[In, Out, Undefined"]}}</td>

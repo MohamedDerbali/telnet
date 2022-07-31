@@ -1,0 +1,32 @@
+
+<div class="import" >
+    <br/><br/><br/><br/>
+    <br/><br/>
+    <div class="table-responsive" >
+    <table class="table text-white">
+        <thead>
+            <th scope="col" style="color: white">Id</th>
+            <th scope="col" style="color: white">Username</th>
+            <th scope="col" style="color: white">First name</th>
+            <th scope="col" style="color: white">Last name</th>
+            <th scope="col" style="color: white">Email</th>
+            <th scope="col" style="color: white">Admin</th>
+            <th scope="col" style="color: white">Action</th>
+        </thead>
+        <tbody style="overflow-y: scroll;">
+            <tr *ngFor="let record of users" >
+                <ng-container *ngIf="userConnected.email!= record['email']">
+                <td style="color: white" >{{record["id"]}}</td>
+                <td style="color: white">{{record["username"]}}</td>
+                <td style="color: white">{{record["first_name"]}}</td>
+                <td style="color: white">{{record["last_name"]}}</td>
+                <td style="color: white">{{record["email"]}}</td>
+                <td style="color: white">{{record["is_superuser"]? "oui": "non"}}</td>
+                <td style="color: white" ><button class="btn btn-danger" (click)="removeUser(record['id'])">Remove</button></td>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    

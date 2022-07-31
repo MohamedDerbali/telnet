@@ -17,6 +17,5 @@ export class ProjectsModalComponent implements OnInit {
   }
   uploadProfilePhoto(files){
     console.log(files[0]);
-
   }
 }

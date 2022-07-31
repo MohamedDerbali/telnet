@@ -1,0 +1,26 @@
+.secondDiv{
+    margin-top: 35px;
+}
+.changePhoto{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+    margin-left: 30%;
+    width: 220px;
+}
+.newName{
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+}
+.closeImg{
+    float:right;
+}
+.closeImg:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+<div class="import" >
+    <br/><br/><br/><br/>
+    <br/><br/>
+    <div class="table-responsive" >
+    <table class="table text-white">
+        <thead>
+            <th scope="col" style="color: white">Gérer</th>
+            <th scope="col" style="color: white">Longueur du champ</th>
+            <th scope="col" style="color: white">Nom du champ</th>
+            <th scope="col" style="color: white">Description des champs</th>
+            <th scope="col" style="color: white">Type du champ</th>
+            <th scope="col" style="color: white">Résultat en décimal</th>
+        </thead>
+        <tbody style="overflow-y: scroll;">
+            <tr *ngFor="let item of JsonDataParsing">
+                <td style="color: white"><button class="btn btn-info" (click)="openModal(item)">Gérer</button></td>
+                <td style="color: white">{{item["Longeur du champ "]}}</td>
+                <td style="color: white">{{item["Nom du champ "]}}</td>
+                <td style="color: white">{{item["Déscription du champ "]}}</td>
+                <td style="color: white;">{{item["Type du champ "]}}</td>
+                <td style="color: white;">{{item["resultat en decimale"]}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
+import {Router} from '@angular/router';
 import * as Papa from 'papaparse';
 @Component({
   selector: 'app-import',
@@ -8,7 +8,7 @@ import * as Papa from 'papaparse';
 })
 export class ImportComponent implements OnInit {
   dataCSV: any[]=[];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +21,8 @@ export class ImportComponent implements OnInit {
         this.dataCSV = result.data;
       }
     });
+  }
+  manageRecord(e, item){
+    this.router.navigateByUrl('/stepTwoReport', { state: item });
   }
 }

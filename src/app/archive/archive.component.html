@@ -6,68 +6,37 @@
     <div class="row">
       <div class="col-sm text-center pt-3" style="border-right: 2px solid white">
         Année
-        <div class="circle">2020</div>
-        <div class="circle">2021</div>
-        <div class="circle">2022</div>
+        <div class="circle" (click)="changeYear(2020)">2020</div>
+        <div class="circle" (click)="changeYear(2021)">2021</div>
+        <div class="circle" (click)="changeYear(2022)">2022</div>
       </div>
       <div class="col-sm text-center pt-3" style="border-right: 2px solid white;padding-left: 30px;">
         Mois
         <div class="row w-100 mt-4" style="column-gap: 2rem; ">
-        <div class="circleMonth col">Janvier</div>
-        <div class="circleMonth col">Juillet</div>
+        <div class="circleMonth col" (click)="changeMonth(01)">Janvier</div>
+        <div class="circleMonth col" (click)="changeMonth(07)">Juillet</div>
+        <div class="w-100 mb-4" ></div>
+        <div class="circleMonth col" (click)="changeMonth(02)">Février</div>
+        <div class="circleMonth col" (click)="changeMonth(08)">Aout</div>
         <div class="w-100 mb-4"></div>
-        <div class="circleMonth col">Février</div>
-        <div class="circleMonth col">Aout</div>
+        <div class="circleMonth col" (click)="changeMonth(03)">Mars</div>
+        <div class="circleMonth col" (click)="changeMonth(09)">Septembre</div>
         <div class="w-100 mb-4"></div>
-        <div class="circleMonth col">Mars</div>
-        <div class="circleMonth col">Septembre</div>
+        <div class="circleMonth col" (click)="changeMonth(04)">Avril</div>
+        <div class="circleMonth col" (click)="changeMonth(10)">Octobre</div>
         <div class="w-100 mb-4"></div>
-        <div class="circleMonth col">Avril</div>
-        <div class="circleMonth col">Octobre</div>
+        <div class="circleMonth col" (click)="changeMonth(05)">Mai</div>
+        <div class="circleMonth col" (click)="changeMonth(11)">Novembre</div>
         <div class="w-100 mb-4"></div>
-        <div class="circleMonth col">Mai</div>
-        <div class="circleMonth col">Novembre</div>
-        <div class="w-100 mb-4"></div>
-        <div class="circleMonth col">Juin</div>
-        <div class="circleMonth col">Décembre</div>
+        <div class="circleMonth col" (click)="changeMonth(06)">Juin</div>
+        <div class="circleMonth col" (click)="changeMonth(12)">Décembre</div>
         <div class="w-100 mb-4"></div>
         </div>
       </div>
       <div class="col-sm text-center pt-3">
         Rapport par jour
     <div class="scrollableExemple">
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
-        <div class="circleExemple">Exemple <img src="../../assets/icon/up.png" class="up"/></div>
+        <div class="circleExemple" *ngFor="let p of reports">{{p.file}} <img src="../../assets/icon/up.png" class="up"/></div>
     </div>
       </div>
     </div>

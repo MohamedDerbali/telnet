@@ -39,7 +39,6 @@ export class ProjectsModalNameComponent implements OnInit {
       .subscribe((res) => {
         this.userConnected.last_name = res.last_name;
         this.userConnected.first_name = res.first_name;
-        // console.log(userr);
         this.appServicesService.refreshToken(localStorage.getItem('token'));
       });
   }

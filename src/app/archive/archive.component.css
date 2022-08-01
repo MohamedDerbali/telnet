@@ -32,7 +32,15 @@
     border-radius: 20px;
     font-size: 20px;
 }
-
+.circleMonth:hover {
+    cursor: pointer;
+}
+.circle:hover {
+    cursor: pointer;
+}
+.circleExemple:hover {
+    cursor: pointer;
+}
 .circleExemple {
     text-align: left;
     padding-left: 30px;

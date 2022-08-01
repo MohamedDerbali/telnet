@@ -1,6 +1,6 @@
 <div>
     <img src="../../assets/modals/close.png" class="closeImg" (click)="close()"/>
-    <input type="file" accept=".jpg" #file (change)="uploadProfilePhoto(file.files)" hidden="true">
+    <input type="file" accept=".jpg" #file (change)="uploadProfilePhoto(userConnected, file.files)" hidden="true">
     <div class="main">
         <img src="../../assets/modals/user.png" class="avatar"/><br/>
         <h6 class="textPhoto">

@@ -6,7 +6,7 @@
   <table>
     <tr>
       <td style="width: 20%; border-left: 1px solid #5A5A5A;">E-mail</td>
-      <td>{{userConnected.email}}</td>
+      <td>{{userConnected?.email}}</td>
       <td style="border-right: 1px solid #5A5A5A;"></td>
     </tr>
     <!-- <tr>
@@ -21,7 +21,7 @@
     </tr> -->
     <tr>
       <td style="width: 20%;border-left: 1px solid #5A5A5A;">Nom</td>
-      <td>{{userConnected.first_name}} {{userConnected.last_name}}</td>
+      <td>{{userConnected?.first_name}} {{userConnected?.last_name}}</td>
       <td style="border-right: 1px solid #5A5A5A;"><button class="btn-modif" (click)="openModalName()">Modifier</button></td>
     </tr>
     <tr>

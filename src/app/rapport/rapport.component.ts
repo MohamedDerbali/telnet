@@ -34,6 +34,15 @@ export class RapportComponent implements OnInit {
     }
     return `L'appareil est défectueux`;
   }
+  public _base64ToArrayBuffer(base64) {
+    var binary_string = window.atob(base64);
+    var len = binary_string.length;
+    var bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+}
   public openPDF(): void {
     let DATA: any = document.getElementById('htmlData');
     html2canvas(DATA).then((canvas) => {
@@ -43,7 +52,19 @@ export class RapportComponent implements OnInit {
       let PDF = new jsPDF('p', 'mm', 'a4');
       let position = 0;
       PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
-      PDF.save('rapport.pdf');
+      PDF.save('contrats.pdf');
+      let todaydate = new Date();
+      let data = {
+        annee :todaydate.getFullYear(),
+        mois : todaydate.getMonth()+1,
+        jour : todaydate.getDay(),
+        heure: todaydate.getHours(),
+        minute: todaydate.getMinutes(),
+        second : todaydate.getSeconds(),
+        file: "rapport.pdf"
+      }
+      this.appServicesService.savePdfToDb(data).subscribe((res) => {
+      });
     });
   }
 }

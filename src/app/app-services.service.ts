@@ -43,4 +43,14 @@ export class AppServicesService {
       refresh: token,
     });
   }
+  changeUserImage(data): Observable<any> {
+    console.log(data)
+    return this.http.post<any>(`${environment.url}/photo/ajouter`, data);
+  }
+  savePdfToDb(data): Observable<any> {
+    return this.http.post<any>(`${environment.url}/pdf/create/`, data);
+  }
+  generateArchive(annee,mois, jour ): Observable<any> {
+    return this.http.get<any>(`${environment.url}/pdf/view/?annee=${annee}&mois=${mois}&jour=${jour}`);
+  }
 }

@@ -50,7 +50,7 @@ export class AppServicesService {
   savePdfToDb(data): Observable<any> {
     return this.http.post<any>(`${environment.url}/pdf/create/`, data);
   }
-  generateArchive(annee,mois, jour ): Observable<any> {
+  generateArchive(annee,mois ): Observable<any> {
     return this.http.get<any>(`${environment.url}/pdf/view/?annee=${annee}&mois=${mois}`);
   }
 }

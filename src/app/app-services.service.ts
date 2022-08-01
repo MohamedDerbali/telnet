@@ -51,6 +51,6 @@ export class AppServicesService {
     return this.http.post<any>(`${environment.url}/pdf/create/`, data);
   }
   generateArchive(annee,mois, jour ): Observable<any> {
-    return this.http.get<any>(`${environment.url}/pdf/view/?annee=${annee}&mois=${mois}&jour=${jour}`);
+    return this.http.get<any>(`${environment.url}/pdf/view/?annee=${annee}&mois=${mois}`);
   }
 }

@@ -27,7 +27,7 @@ export class ArchiveComponent implements OnInit {
   changeMonth(mois){
     this.archiveData.mois = mois;
     this.appServicesService
-    .generateArchive(this.archiveData.annee,this.archiveData.mois,1)
+    .generateArchive(this.archiveData.annee,this.archiveData.mois)
     .subscribe((res) => {
       this.reports = res;
     }
@@ -36,7 +36,7 @@ export class ArchiveComponent implements OnInit {
   changeYear(years){
     this.archiveData.annee = years;
     this.appServicesService
-    .generateArchive(this.archiveData.annee,this.archiveData.mois,1)
+    .generateArchive(this.archiveData.annee,this.archiveData.mois)
     .subscribe((res) => {
       this.reports = res;
     }
